@@ -2,21 +2,6 @@
   "name": "material-kit-2-react",
   "version": "2.0.0",
   "private": true,
-  "author": "Creative Tim",
-  "license": "See license in https://www.creative-tim.com/license",
-  "description": "React version of Material Kit 2 by Creative Tim",
-  "homepage": "https://demos.creative-tim.com/material-kit-react/#/",
-  "bugs": {
-    "url": "https://github.com/creativetimofficial/ct-material-kit-react/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/creativetimofficial/ct-material-kit-react.git"
-  },
-  "engines": {
-    "node": "14 || 15 || 16",
-    "npm": ">=6"
-  },
   "dependencies": {
     "@emotion/cache": "11.4.0",
     "@emotion/react": "11.4.1",
@@ -48,12 +33,6 @@
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install --force && npm start"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -65,17 +44,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "eslint": "7.30.0",
-    "eslint-config-airbnb": "18.2.1",
-    "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-import": "2.23.4",
-    "eslint-plugin-jsx-a11y": "6.4.1",
-    "eslint-plugin-prettier": "3.4.0",
-    "eslint-plugin-react": "7.24.0",
-    "eslint-plugin-react-hooks": "4.2.0",
-    "prettier": "2.3.2",
-    "react-error-overlay": "^6.0.9"
   }
 }
