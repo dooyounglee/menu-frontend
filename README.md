@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# menu-frontend
+Menu 프로젝트 frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://menu-frontend-f6403.web.app/
 
-## Available Scripts
+회원가입 후 로그인 시, 부여된 메뉴 권한이 없다는 알림창이 뜸.
 
-In the project directory, you can run:
+* React
+* Meterial React template
+* Firebase
 
-### `npm start`
+------------------
+### menu-admin
+https://menu-admin-51e2f.firebaseapp.com
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+관리자 로그인 정보(username: admin@doo.com, password: admin)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+관리자 로그인 후, Menu > Auth 에서 회원가입 계정에 메뉴 권한 부여 후
 
-### `npm test`
+menu-frontend에서 로그인하면 권한 부여된 메뉴가 나옴.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+github주소: github.com/dooyounglee/menu-admin
 
-### `npm run build`
+### menu-backend
+Menu 프로젝트 백엔드
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+로그인한 계정의 메뉴 권한에 따라 메뉴가 다르게 보임.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+github주소: github.com/dooyounglee/menu-backend
