@@ -45,7 +45,7 @@ import footerRoutes from "footer.routes";
 
 import axios from "axios";
 import Icon from "@mui/material/Icon";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Images
 import bgImage from "assets/images/bg-presentation.jpg";
