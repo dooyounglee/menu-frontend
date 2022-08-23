@@ -27,7 +27,7 @@ import theme from "assets/theme";
 import Presentation from "layouts/pages/presentation";
 
 // Material Kit 2 React routes
-import routes from "routes";
+// import routes from "routes";
 import SignIn from "pages/login/SignIn";
 import SignUp from "pages/login/SignUp";
 
@@ -57,7 +57,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Routes>
-        {getRoutes(routes)}
+        {/* {getRoutes(routes)} */}
         <Route path="/presentation" element={<Presentation />} />
         <Route path="/authentication/sign-up" element={<SignUp />} />
         <Route path="*" element={<SignIn />} />

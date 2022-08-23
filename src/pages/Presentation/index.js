@@ -84,23 +84,6 @@ function Presentation() {
   const [routes, setRoutes] = useState(JSON.parse(localStorage.getItem("menu")));
   const [ready, setReady] = useState(true);
 
-  /*useEffect(() => {
-    setRoutes(routess);
-  }, [routess]);*/
-  /* useEffect(async () => {
-    axios.get("http://localhost:8080/menu/basic").then((response) => {
-      console.log(ready);
-      console.log(response.data);
-      setRoutes(
-        response.data.map((menu) => {
-          if (menu.icon != undefined) menu.icon = <Icon>{menu.icon}</Icon>;
-          if (menu.component != undefined) menu.component = React.createElement(menu.icon, {});
-          return menu;
-        })
-      );
-      setReady(true);
-    });
-  }, []); */
   useEffect(() => {
     setRoutes(
       JSON.parse(localStorage.getItem("menu")).map((menu) => {
@@ -110,10 +93,6 @@ function Presentation() {
       })
     );
   }, []);
-
-  const dlendud = () => {
-    console.log("dd");
-  };
 
   return (
     <>
@@ -166,7 +145,7 @@ function Presentation() {
           </Grid>
         </Container>
       </MKBox>
-      <Card
+      {/* <Card
         sx={{
           p: 2,
           mx: { xs: 2, lg: 3 },
@@ -282,7 +261,7 @@ function Presentation() {
             </Grid>
           </Container>
         </MKBox>
-      </Card>
+      </Card> */}
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
       </MKBox>

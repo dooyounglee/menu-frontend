@@ -63,15 +63,12 @@ function SignUp() {
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
   const signUp = () => {
-    console.log(state);
-
     if (state.password !== state.confirmPassword) {
       alert("check password");
       return false;
     }
 
     axios.post(BASE_URL + "/user/signUp", state).then((response) => {
-      console.log(response);
 
       navigate("/");
     });
@@ -157,6 +154,15 @@ function SignUp() {
                   </MKBox>
                   <MKBox mb={2}>
                     <MKInput
+                      type="text"
+                      label="username"
+                      name="username"
+                      fullWidth
+                      onChange={handleChange}
+                    />
+                  </MKBox>
+                  <MKBox mb={2}>
+                    <MKInput
                       type="password"
                       label="Password"
                       name="password"
@@ -211,9 +217,9 @@ function SignUp() {
           </Grid>
         </Grid>
       </MKBox>
-      <MKBox width="100%" position="absolute" zIndex={2} bottom="1.625rem">
+      {/* <MKBox width="100%" position="absolute" zIndex={2} bottom="1.625rem">
         <SimpleFooter light />
-      </MKBox>
+      </MKBox> */}
     </>
   );
 }

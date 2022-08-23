@@ -68,17 +68,6 @@ import ProgressBars from "layouts/sections/elements/progress-bars";
 import Toggles from "layouts/sections/elements/toggles";
 import Typography from "layouts/sections/elements/typography";
 
-import axios from "axios";
-
-/*let routes = [];
-axios.get("http://localhost:8080/menu/basic").then((response) => {
-  routes = response.data.map((menu) => {
-    if (menu.icon != undefined) menu.icon = <Icon>{menu.icon}</Icon>;
-    if (menu.component != undefined) menu.component = React.createElement(menu.icon, {});
-    return menu;
-  });
-});*/
-
 const routes = [
   {
     name: "pages",

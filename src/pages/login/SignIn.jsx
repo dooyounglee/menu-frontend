@@ -63,10 +63,7 @@ function SignIn() {
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
   const signIn = () => {
-    console.log(state);
-    // axios.post("http://localhost:8080/user/signIn", state).then((response) => {
     axios.post(BASE_URL + "/user/login", state).then((response) => {
-      console.log(response);
 
       // jwt
       const jwtToken = response.headers.authorization;
@@ -78,7 +75,7 @@ function SignIn() {
       const { user, menus, authList } = response.data;
 
       if (authList.length === 0) {
-        alert("You have no auth of any menu. please ask for admin.");
+        alert("You do not have access to any menu. Contact your administrator.");
         navigate("/");
         return false;
       }
@@ -227,9 +224,9 @@ function SignIn() {
           </Grid>
         </Grid>
       </MKBox>
-      <MKBox width="100%" position="absolute" zIndex={2} bottom="1.625rem">
+      {/* <MKBox width="100%" position="absolute" zIndex={2} bottom="1.625rem">
         <SimpleFooter light />
-      </MKBox>
+      </MKBox> */}
     </>
   );
 }
