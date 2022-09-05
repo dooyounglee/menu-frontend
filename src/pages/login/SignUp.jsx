@@ -13,7 +13,7 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // react-router-dom components
 import { Link, Navigate, useNavigate } from "react-router-dom";
@@ -51,6 +51,7 @@ function SignUp() {
   const [state, setState] = useState({});
   const [rememberMe, setRememberMe] = useState(false);
   const [isAuthenticated, setAuth] = useState(false);
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (event) => {
@@ -60,7 +61,7 @@ function SignUp() {
     });
   };
 
-  const handleSetRememberMe = () => setRememberMe(!rememberMe);
+  // const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
   const signUp = () => {
     if (state.password !== state.confirmPassword) {
@@ -69,10 +70,28 @@ function SignUp() {
     }
 
     axios.post(BASE_URL + "/user/signUp", state).then((response) => {
-
       navigate("/");
+    }).catch((error) => {
+      alert(error.response.data);
     });
   };
+
+  useEffect(() => {
+    if (state.password !== state.confirmPassword) {
+      setError(true);
+    } else {
+      setError(false);
+    }
+  }, [state])
+
+  useEffect(() => {
+    setState({
+      email: "email03@doo.com",
+      username: "email03",
+      password: "email03",
+      confirmPassword: "email03",
+    });
+  }, [])
 
   return (
     <>
@@ -155,7 +174,7 @@ function SignUp() {
                   <MKBox mb={2}>
                     <MKInput
                       type="text"
-                      label="username"
+                      label="Username"
                       name="username"
                       fullWidth
                       onChange={handleChange}
@@ -177,6 +196,7 @@ function SignUp() {
                       name="confirmPassword"
                       fullWidth
                       onChange={handleChange}
+                      error={error}
                     />
                   </MKBox>
                   {/* <MKBox display="flex" alignItems="center" ml={-1}>

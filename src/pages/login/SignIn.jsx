@@ -60,7 +60,7 @@ function SignIn() {
     });
   };
 
-  const handleSetRememberMe = () => setRememberMe(!rememberMe);
+  // const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
   const signIn = () => {
     axios.post(BASE_URL + "/user/login", state).then((response) => {
@@ -72,13 +72,8 @@ function SignIn() {
         setAuth(true);
       }
 
-      const { user, menus, authList } = response.data;
+      const { menus, authList } = response.data;
 
-      if (authList.length === 0) {
-        alert("You do not have access to any menu. Contact your administrator.");
-        navigate("/");
-        return false;
-      }
       let authMenus = authList[0].menus;
 
       const menuFilterWithAuth = (arr) => {
@@ -96,6 +91,11 @@ function SignIn() {
       localStorage.setItem("menu", JSON.stringify(menuFilterWithAuth(menus)));
 
       document.location.href = "/presentation";
+    }).catch((error) => {
+      console.log(error)
+      alert(error.response.data);
+      // alert("You do not have access to any menu. Contact your administrator.");
+      // navigate("/");
     });
   };
 
