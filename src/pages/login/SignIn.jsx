@@ -90,7 +90,8 @@ function SignIn() {
       };
       localStorage.setItem("menu", JSON.stringify(menuFilterWithAuth(menus)));
 
-      document.location.href = "/presentation";
+      // document.location.href = "/presentation";
+      navigate("/presentation");
     }).catch((error) => {
       console.log(error)
       alert(error.response.data);
