@@ -12,7 +12,6 @@ jobs:
       - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          entrypoint: /home/runner/work/menu-frontend/menu-frontend
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MENU_FRONTEND_F6403 }}'
           projectId: menu-frontend-f6403
